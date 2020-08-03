@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-08-04T01:05:25 IST" name="Default suite" finished-at="2020-08-04T01:06:27 IST" duration-ms="61954">
+    <groups>
+    </groups>
+    <test started-at="2020-08-04T01:05:25 IST" name="Default test" finished-at="2020-08-04T01:06:27 IST" duration-ms="61954">
+      <class name="Shwetank.RechargeTest">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:Shwetank.RechargeTest@355ce81c]" started-at="2020-08-04T01:05:25 IST" name="openBrowser" finished-at="2020-08-04T01:05:39 IST" duration-ms="13226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="checkRegisterBtn()[pri:0, instance:Shwetank.RechargeTest@355ce81c]" started-at="2020-08-04T01:05:39 IST" name="checkRegisterBtn" finished-at="2020-08-04T01:06:26 IST" duration-ms="47664" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkRegisterBtn -->
+        <test-method is-config="true" signature="AfterMethod()[pri:0, instance:Shwetank.RechargeTest@355ce81c]" started-at="2020-08-04T01:06:26 IST" name="AfterMethod" finished-at="2020-08-04T01:06:27 IST" duration-ms="1004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterMethod -->
+      </class> <!-- Shwetank.RechargeTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
