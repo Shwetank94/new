@@ -13,16 +13,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import Resources.Base;
-import pageObjects.ConfirmationPage;
-import pageObjects.PaymentPage;
-import pageObjects.CellularRecharge;
+import pageObjects.ProductPage;
+import pageObjects.LoginPage;
 
-public class RechargeTest extends Base {
+public class ProductVersionTest extends Base {
 
-	CellularRecharge cr;
+	LoginPage lp;
 	WebDriver driver;
-	PaymentPage pp;
-	ConfirmationPage cp;
+	ProductPage pp;
+	
 
 	
 	@BeforeMethod//Using before method for creating objects of classes and  loading the url as it is common in every test case
@@ -30,22 +29,20 @@ public class RechargeTest extends Base {
 	{
 		
 		driver = intitializedriver();
-	    cr = new CellularRecharge(driver);
-	    pp= new PaymentPage(driver);
-	    cp = new ConfirmationPage(driver);
+	    lp = new LoginPage(driver);
+	    pp= new ProductPage(driver);
+	   
 		driver.get(prop.getProperty("url"));
 	}
 	
 	@Test
-	public void checkRegisterBtn() throws InterruptedException {
+	public void check_Version() throws InterruptedException, IOException {
   
-		  cr.fill_UserDetails();//Filling the user contact details
-		  cr.click_siguinte_Btn();// Submitting the details
-		  pp.fill_paymentPageDetails(); // Filling the payment details
-		  pp.click_Target_Btn(); // Submitting the payment details
-		  pp.fill_authenticationPage(); // Filling the authentication Layer
-		  Assert.assertEquals(cp.getText_Success(), "¡Exitosa! - $10"); //Verifying the success message
+		  lp.perform_Login();
+		  pp.check_Version();//prints the product version on console
 		}
+	
+	
 	
 	@AfterMethod//Closing the browser
 	public void AfterMethod()
